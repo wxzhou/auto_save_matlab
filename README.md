@@ -1,7 +1,13 @@
 # autosave
 Automatically save running results of your disposable code.
 
-Software engineers use Git, SVN or other professional tools to mange their code. But scientists use computer as their experiment tools and write codes for scientific computation or simulation. Tools such as Git may seem too professional for their disposable codes. That's why I wrote `autosave`.
+Unlike software engineers, scientists use computers as their experiment tools and write codes for scientific computation and simulation. A tool that helps them record the computation results is thus necessary:
+
+* The codes are often disposable and no need for branching, rebase, merging or other Git operations. So code management tools such as Git may seem too professional for them.
+* The codes are often saved along with the running results, such as data/variables and figures.
+* The codes are often run for multiple times with changed parameters. It is necessary to record the code/parameter and their corresponding running results.
+
+`autosave` is such a tool.
 
 Currently supported language: Matlab, Python.
 
