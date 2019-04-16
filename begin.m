@@ -1,7 +1,30 @@
-% BEGIN Get ready for the run of a new programme. 
+% BEGIN Get ready for the run of a new code.
+%
+% BEGIN does three things:
+%
+% # Sets the flag for saving;
+% # Runs the common command `clear variables;close all;clc`;
+% # Timing of code exeution.
+%
+% BEGIN ON  saves all data in .mat file and all figures in .fig files,
+% sharing the same run index.
+%
+% BEGIN OFF saves neither data nor the figures.
+%
+% BEGIN VAR saves all data but not figures with a new run index.
+%
+% BEGIN FIG saves all figures but not data with a new run index.
+%
+% BEGIN MODE fun1 fun2 ... also saves the codes in function fun1, fun2, ...,
+% while MODE is ON or VAR.
+%
+% Note: BEGIN only sets the flag for saving. The saving step is done in
+% the function `over`.
+%
+% See also over.
 
 function begin(varargin)
-evalin('caller','clear variables;close all;clc;tic;');
+evalin('caller','clear variables;close all;clc;');
 
 global IfSaveVar IfSaveFig FuncList TStart_Begin;
 TStart_Begin = tic;

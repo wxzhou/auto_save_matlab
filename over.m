@@ -1,34 +1,37 @@
-% OVER Save all data and figures. 
-% 
+% OVER Save all data and figures.
+%
 % OVER ON  saves all data in .mat file and all figures in .fig files,
-% sharing the same run index. 
+% sharing the same run index.
 %
 % OVER OFF saves neither data nor the figures.
-% 
-% OVER VAR saves all data but not figures with a new run index. 
-% 
-% OVER FIG saves all figures but not data with a new run index. 
+%
+% OVER VAR saves all data but not figures with a new run index.
+%
+% OVER FIG saves all figures but not data with a new run index.
 %
 % OVER MODE fun1 fun2 ... also saves the codes in function fun1, fun2, ...,
-% while MODE is ON or VAR;
-% 
-% The name of the saved .mat file is: 
-%      [Caller Name]_run[Run Index].mat, 
-% 
+% while MODE is ON or VAR.
+%
+% OVER MODE overwrites the MODE of `begin`, and OVER alone without MODE
+% follows the MODE of `begin`.
+%
+% The name of the saved .mat file is:
+%      [Caller Name]_run[Run Index].mat,
+%
 % and the names of the saved .fig files are:
 %      [Caller Name]_run[Run Index]_fig[Fig Index].fig
-% 
+%
 % OVER checks existing saved .mat files and updates the run index in every
-% run. 
-% 
+% run.
+%
 % Example:
-% 
-% Using OVER ON in the end of file Trial01.m will produce Trial01_run1.mat,
-% Trial01_run1_fig1.fig, and Trial01_run1_fig2.fig. And if Trial01.m is run
-% the second time, it will produce Trial01_run2.mat, Trial01_run2_fig1.fig
-% and Trial01_run2_fig2.fig. 
-% 
-% See also begin, startup. 
+%
+% Using OVER ON in the end of file Trial.m will produce Trial_run1.mat,
+% Trial_run1_fig1.fig, and Trial_run1_fig2.fig. And if Trial.m is run
+% the second time, it will produce Trial_run2.mat, Trial_run2_fig1.fig
+% and Trial_run2_fig2.fig.
+%
+% See also begin.
 
 function over(varargin)
 
